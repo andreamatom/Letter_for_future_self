@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Future Self</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-22.png" type="favicon">
+
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <a href="index.html"><div class="websitetitle">Dear Future Self</div></a>
+        <div id="date-time"></div>
+    </div>
+        <div class="full-width-line"></div>
+
+        <a href="index.html"><img src="images/returnarrow.png" alt="back arrow" class="backarrow"></a>
+
+        <div class="flex-container"> 
+            <div class="image-grid6">
+                <img src="images/stamp_envelope-26.png" alt="Image 1">
+            </div>
+            <div class="button-column">
+                <a href="send.html"> <button id="sendLetterBtn">Send!</button></a>
+            </div>
+        </div>
+        
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const dateString = now.toLocaleDateString('en-US', {
+                weekday: 'long', // "Monday"
+                year: 'numeric', // "2023"
+                month: 'long', // "April"
+                day: 'numeric' // "14"
+            });
+            const timeString = now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+
+            document.getElementById('date-time').innerHTML = dateString + ' ' + timeString;
+        }
+
+        setInterval(updateTime, 1000);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Future Self</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-22.png" type="favicon">
+</head>
+<body>
+    <div class="header-container">
+        <div class="websitetitle">Dear Future Self</div>
+        <div id="date-time"></div>
+    </div>
+    <div class="full-width-line"></div>
+    <div class="flex-container">
+        <div class="flex-container">
+            <div class="image-grid">
+                <a href="letter1.html"><img src="images/date1.png" alt="Image 1" class="hover"></a>
+               <img src="images/date2.png" alt="Image 3">
+                <img src="images/date-14.png" alt="Image 3">
+                <img src="images/date-15.png" alt="Image 4">
+                <img src="images/date-16.png" alt="Image 5">
+               <img src="images/date-17.png" alt="Image 6">
+                <img src="images/date-18.png" alt="Image 7">
+                <img src="images/date-19.png" alt="Image 8">
+                <img src="images/date-20.png" alt="Image 9">
+            </div>
+
+    
+
+        <div class="button-column">
+            <button id="sendLetterBtn">Send New Letter</button>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const dateString = now.toLocaleDateString('en-US', {
+                weekday: 'long', // "Monday"
+                year: 'numeric', // "2023"
+                month: 'long', // "April"
+                day: 'numeric' // "14"
+            });
+            const timeString = now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+
+            document.getElementById('date-time').innerHTML = dateString + ' ' + timeString;
+        }
+
+        setInterval(updateTime, 1000);
+        
+        document.getElementById('sendLetterBtn').addEventListener('click', function() {
+            window.location.href = 'time.html'; 
+        });
+    </script>
+</body>
+</html>

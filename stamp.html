@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Future Self</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-22.png" type="favicon">
+</head>
+<body>
+    <div class="header-container">
+        <a href="index.html"><div class="websitetitle">Dear Future Self</div></a>
+        <div id="date-time"></div>
+    </div>
+<div class="full-width-line"></div>
+
+<span class="centered-container">
+        <div class="image-grid5">
+            <a href="stamp1.html"><img src="images/stamps-02.png" alt="Image 1" class="hover"></a>
+            <a href="stamp2.html"><img src="images/stamps-03.png" alt="Image 1" class="hover"></a>
+            <a href="stamp3.html"><img src="images/stamps-04.png" alt="Image 1" class="hover"></a>
+            <a href="stamp4.html"><img src="images/stamps-05.png" alt="Image 1" class="hover"></a>
+            <a href="stamp5.html"><img src="images/stamps-06.png" alt="Image 1" class="hover"></a>
+            <a href="stamp6.html"><img src="images/stamps-07.png" alt="Image 1" class="hover"></a>
+        </div>
+    </span>
+
+    <a href="index.html"><img src="images/returnarrow.png" alt="back arrow" class="backarrow"></a>
+
+      <script>
+        function updateTime() {
+            const now = new Date();
+            const dateString = now.toLocaleDateString('en-US', {
+                weekday: 'long', // "Monday"
+                year: 'numeric', // "2023"
+                month: 'long', // "April"
+                day: 'numeric' // "14"
+            });
+            const timeString = now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+
+            document.getElementById('date-time').innerHTML = dateString + ' ' + timeString;
+        }
+
+        setInterval(updateTime, 1000);
+        
+        document.getElementById('sendLetterBtn').addEventListener('click', function() {
+            window.location.href = 'writeletter.html'; 
+        });
+    </script>
+    </body>
+</html>
