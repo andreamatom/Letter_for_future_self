@@ -7,7 +7,7 @@
 
 #date-time, .websitetitle {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   color: blue;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -41,7 +41,7 @@ html, body {
     font-weight: 300;
     font-style: normal;
     color: blue;
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .space-grotesk2{
@@ -50,7 +50,7 @@ html, body {
     font-weight: 300;
     font-style: normal;
     color: blue;
-    font-size: 80px;
+    font-size: 50px;
   }
   
   .centered-container {
@@ -166,6 +166,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  margin-top: 30px;
   width: 75%; 
   padding: 50px;
   margin-left: 6vw;
@@ -206,12 +207,11 @@ html, body {
 
 button {
     padding: 10px 20px;
-    font-size: 35px; 
+    font-size: 25px; 
     border: 2px solid blue; 
     background-color: white;
     cursor: pointer;
     font-family: "Space Grotesk", sans-serif;
-    /* font-optical-sizing: auto; */
     font-weight: 300;
     font-style: normal;
     color: blue;
@@ -241,7 +241,7 @@ button {
       border-radius: 1px;     
       color: blue;
       background-color: white; 
-      font-size: 30px;      
+      font-size: 20px;      
       resize: none;    
       line-height: 2em;      
   }
@@ -258,7 +258,7 @@ button {
     background-color: white;
     color: blue;
     padding: 30px;
-    font-size: 50px;
+    font-size: 25px;
     border: 2px solid blue;
     width: 100%;  /* Ensure the button fills the container */
     box-sizing: border-box;  /* Include padding and border in the button's width */
@@ -285,7 +285,7 @@ button {
   width: 100%;  /* Set width to 100% instead of min-width */
   border: 2px solid blue;
   z-index: 1;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   box-sizing: border-box;  /* Include padding and border in the element's width */
 }
@@ -308,18 +308,4 @@ border: 2px white}
 
   .dropdown:hover .dropbtn {background-color: blue;
 color: white;}
-
-
-#drag1 {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
-
-#div1 {
-  width: 150px;
-  height: 150px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
-}
 
