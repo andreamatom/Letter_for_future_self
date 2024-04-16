@@ -206,7 +206,7 @@ html, body {
 
 button {
     padding: 10px 20px;
-    font-size: 35px;
+    /* font-size: 35px; */
     border: 2px solid blue; 
     background-color: white;
     cursor: pointer;
